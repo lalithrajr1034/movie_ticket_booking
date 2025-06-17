@@ -1,12 +1,29 @@
+from functions import movies
 
-def movies():
-    movieList={
-        1:"Pushpaka vimana",
-        2:"Bahubali",
-        3:"Bhramastra"
-    }
-    key = 1
-    if key in movieList:
-        print(key)
-        print(f"{key}.{movieList[2]}")
-movies()   
+#shows
+
+print("""
+      1.morning show 
+      2.afternoon show
+      3.Night show""")
+movie_shows=int(input("Enter the shows number : "))
+if movie_shows==1:
+    print("You have selected Morning show")
+    movies.morning_show_movies()
+elif movie_shows==2:
+    print("You have selected After noon show")
+    movies.afternoon_show_movies()
+elif movie_shows==3:
+    print("You have selected Night show")
+    movies.night_show_movies()   
+else:
+    print("You entered wrong show number")
+    
+
+
+#movie's
+
+
+
+
+#seat type
