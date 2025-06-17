@@ -1,3 +1,5 @@
+from functions import movies
+
 #shows
 print("""
       1.morning show 
@@ -6,14 +8,18 @@ print("""
 movieShows=int(input("Enter the shows: "))
 if movieShows==1:
     print("You have selected Morning show")
-    pass
+    movies()
 elif movieShows==2:
     print("You have selected After noon show")
+    movies()
 elif movieShows==3:
     print("You have selected Night show")
-    pass    
-    
+    movies()    
 
 
 #movie's
+
+
+
+
 #seat type
