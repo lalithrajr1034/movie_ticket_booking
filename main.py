@@ -1,9 +1,9 @@
 from movie_name import Movies
+# from catagories import Ceat
 
-
-#Call the method -----
+# object------
 m_name=Movies()
-
+# ceat_t=Ceat()
 
 
 # shows and movies 

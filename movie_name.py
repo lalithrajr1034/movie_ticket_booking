@@ -1,6 +1,22 @@
+from catagories import Ceat
+ceat_t=Ceat()
+
+
 class Movies:  
+   
     def __init__(self):
         pass
+    def ceat_type(self):
+        inp_ceat_type=int(input("\n1.vip     --250\n2.general --150\nEnter the number of ceat type:"))
+        if inp_ceat_type==1:
+            print("you have selected vip")
+            ceat_t.vip()
+        elif inp_ceat_type==2:
+            print("you have selected general")
+            ceat_t.general()
+        else:
+            print("you entered invalid option") 
+            self.ceat_type()   
   # morning_show
     def morning_show(self):
         self.morning_movie_list={
@@ -12,10 +28,10 @@ class Movies:
         # it helps to print the movie name 
         for i in self.morning_movie_list:
             print(f"      {i}.{self.morning_movie_list[i]}")
-        
         inp_var1=int(input("Enter the movie number "))
         if inp_var1 in self.morning_movie_list:
            print(f"You have seleced :{self.morning_movie_list[inp_var1]}")
+           self.ceat_type()
         else:
             print("Invalid movie number")   
             
@@ -46,12 +62,12 @@ class Movies:
         inp_var3=int(input("Enter the option"))   
         if inp_var3 in self.night_movie_list:
             print(f"you have selected {self.night_movie_list[inp_var3]}")
+            self.ceat_type()
         else:
             print("Invalid movie number")    
         
         
- 
- 
+
  
 
 #this should be a second value    
