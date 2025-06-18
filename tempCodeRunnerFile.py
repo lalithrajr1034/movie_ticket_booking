@@ -1,2 +1,2 @@
-for i in range(31,101):
-    print(f"{i},")       
+for i in range(1,71):
+    print(f"{i},",end="")      

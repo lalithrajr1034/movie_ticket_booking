@@ -30,14 +30,11 @@ class Ceat:
                    elif book_seats not in vip_seat and 0<book_seats<31:
                       print(f"{i} Seat number {book_seats} is already booked: ")
                       recorrect()
-                   elif 30<book_seats>101:
-                      print(f"{i} Seat number {book_seats} is Not vip")
-                      recorrect()
                    # elif book_seats==None:
                    #     print("Enter proper values ")
                    #     recorrect(self)   
                    else:
-                      print(f"{i} Please select the seat number 1 - 100")
+                      print(f"{i} Please select the seat number 1 - 30")
                       recorrect()
                    self.empty_ceat_list=vip_seat                         
                 recorrect()
@@ -51,32 +48,35 @@ class Ceat:
         
     def general(self):
         self.general_empty_ceat_list
-        general_seat=[31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100]
+        general_seat=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70]
         print(general_seat)
         num_ceat=int(input("Enter the nuber of seat: "))
-        if 0<num_ceat<101:
-            for i in num_ceat:
+        if 0<num_ceat<70:
+            for i in range(1,num_ceat+1):
                 def repeated():
-                    ceat_no=int(input(f"{i}Enter the ceat number :"))
+                    ceat_no=int(input(f"{i}.Enter the ceat number :"))
                     if ceat_no in general_seat:
                         general_seat.remove(ceat_no)
-                    elif 0<ceat_no>31:
-                        print("you are trying to enter the vip ceat")
-                    elif ceat_no>100:
-                        print("you are trying to enter the vip ceat")    
+                        print(general_seat)
+                    elif ceat_no>70:
+                        print("  we have only max 70 ceat")    
+                        repeated()
                     else:
-                        print("ceat is already booked")    
-                        
-                
+                        print(f"  ceat number {ceat_no} already booked")    
+                        repeated()
+                repeated()
+             
         else:
             print("we dont have many seats")
-            
+        self.general_empty_ceat_list=general_seat    
+        print(self.general_empty_ceat_list)   
         
         
                 
         
 o=Ceat()
 # o.vip()
-o.general()
+# o.general()
         
-      
+v=o.general_empty_ceat_list
+print(v)
