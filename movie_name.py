@@ -47,6 +47,7 @@ class Movies:
         inp_var2=int(input("Enter the values of the movie"))
         if inp_var2 in self.afternoon_movie_list:
             print(f"you have selected {self.afternoon_movie_list[inp_var2]}")
+            self.ceat_type()
         else :
             print("invalid movie number")
               
