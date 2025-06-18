@@ -26,7 +26,3 @@ else:
     
 
 #seat type
-"""
-VIP      30   250
-REGULAR  70   150 
-"""
