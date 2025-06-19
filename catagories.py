@@ -122,6 +122,6 @@ class Ceat:
         
         
             
-c=Ceat()
+# c=Ceat()
 # c.vip()
-c.general()               
+# c.general()               
