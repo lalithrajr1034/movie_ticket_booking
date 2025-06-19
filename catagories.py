@@ -5,11 +5,12 @@ class Ceat:
         self.general_empty_ceat_list=[]
         self.general_booked_ceat=[]
         
-    def book_more_seats(self,listt,st,end):
+    def book_more_seats(self,listt):
         self.list=listt
+        end=len(self.list)
         print(self.list)
         no_seats=int(input("Enter the number of seats to book: "))  
-        if 0 < no_seats >end:
+        if 0 < no_seats <=end:
             for i in range(1,no_seats):
                 def recorrecct():
                     self.re_book_seats=int(input(f"{i} Enter which seats to book : "))
@@ -35,7 +36,6 @@ class Ceat:
         
          
     def vip(self):
-    # print(self.vip_empty_ceat_list)
         vip_seat=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,7,28,29,30]
         print(vip_seat)
         no_seats=int(input("Enter the number of seats to book: "))            
@@ -68,8 +68,7 @@ class Ceat:
         print("Booked seat's",self.vip_booked_ceat)
         re_book=int(input("\n1.book more\n2.get ticket\n3.Exit \nEnter the option:"))
         if re_book==2:
-           A=len(self.vip_booked_ceat)
-           
+           A=len(self.vip_booked_ceat)          
            print("\nyou have booked ",A," seats")
            print(" 1 VIP = 250\n",A,"VIP = ",A*250)
            print("Thankyou.....\n\n")
@@ -77,8 +76,8 @@ class Ceat:
             print("You can book more seat")
             self.st=0
             self.end=31
-            self.book_more_seats(self.vip_empty_ceat_list,self.st,self.end)  #--------------------------------------------------------------------------
-            print("hi") 
+            self.book_more_seats(self.vip_empty_ceat_list)  #--------------------------------------------------------------------------
+            
         else:
             return    
        
@@ -110,15 +109,19 @@ class Ceat:
         re_book=int(input("\n1.book more\n2.get ticket\n3.Exit \nEnter the option:"))
         if re_book==2:
            A=len(self.general_booked_ceat)
+        #    print(Mov.ticket_variable[0])
            print("\n you have booked ",A," seats")
            print(" 1 VIP = 250\n",A,"VIP = ",A*250)
            print("Thankyou.....\n\n")
         elif re_book==1:
             print("You can book more seat")
-            self.book_more_seats(self.general_empty_ceat_list,0,70)   
+            self.book_more_seats(self.general_empty_ceat_list)   
         else:
-            return
+            return  
+        
+        
+        
             
 c=Ceat()
-c.vip()
-# c.general()               
+# c.vip()
+c.general()               

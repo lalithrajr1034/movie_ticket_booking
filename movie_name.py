@@ -5,7 +5,7 @@ ceat_t=Ceat()
 class Movies:  
    
     def __init__(self):
-        pass
+        self.ticket_variable=[]
     def ceat_type(self):
         inp_ceat_type=int(input("\n1.vip     --250\n2.general --150\nEnter the number of ceat type:"))
         if inp_ceat_type==1:
@@ -32,6 +32,7 @@ class Movies:
         if inp_var1 in self.morning_movie_list:
            print(f"You have seleced :{self.morning_movie_list[inp_var1]}")
            self.ceat_type()
+           self.ticket_variable.append(self.morning_movie_list[inp_var1]) # helps to print the film name in ticket 
         else:
             print("Invalid movie number")   
             
@@ -48,6 +49,7 @@ class Movies:
         if inp_var2 in self.afternoon_movie_list:
             print(f"you have selected {self.afternoon_movie_list[inp_var2]}")
             self.ceat_type()
+            self.ticket_variable(self.afternoon_movie_list[inp_var2])
         else :
             print("invalid movie number")
               
@@ -64,19 +66,18 @@ class Movies:
         if inp_var3 in self.night_movie_list:
             print(f"you have selected {self.night_movie_list[inp_var3]}")
             self.ceat_type()
+            self.ticket_variable(self.night_movie_list[inp_var3])
         else:
             print("Invalid movie number")    
-        
-        
-
+     
+# mnc=Movies()
+# mnc.morning_show()        
  
 
 #this should be a second value    
         
   
-  
-  
-  
+
 # LEARNING  :
 
 # Instance variable and local-----------
